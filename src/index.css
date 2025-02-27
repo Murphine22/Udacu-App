@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  .print-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
+
+/* Dark mode text visibility fixes */
+.dark .text-current {
+  color: white;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.dark select {
+  background-color: #374151;
+  color: white;
+}
+
+.dark option {
+  background-color: #1F2937;
+}
+
+/* Fix background colors in dark mode */
+.dark .bg-white {
+  background-color: #1F2937;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111827;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1F2937;
+}
+
+.dark .bg-blue-50 {
+  background-color: rgba(30, 58, 138, 0.2);
+}
+
+/* Fix border colors in dark mode */
+.dark .border-gray-300 {
+  border-color: #374151;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151;
+}
+
+/* Fix text colors in dark mode */
+.dark .text-gray-700 {
+  color: #D1D5DB;
+}
+
+.dark .text-gray-600 {
+  color: #9CA3AF;
+}
+
+.dark .text-gray-500 {
+  color: #6B7280;
+}
+
+/* Responsive fixes */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  nav .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Fix form elements in dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #374151;
+  border-color: #4B5563;
+  color: white;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #3B82F6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Fix table styles in dark mode */
+.dark table {
+  color: #E5E7EB;
+}
+
+.dark th {
+  background-color: #374151;
+}
+
+.dark td {
+  border-color: #4B5563;
+}
+
+.dark tr:hover {
+  background-color: rgba(55, 65, 81, 0.7);
+}
+
+/* Fix button styles in dark mode */
+.dark button.bg-blue-600:hover {
+  background-color: #2563EB;
+}
+
+.dark button.bg-red-600:hover {
+  background-color: #DC2626;
+}
+
+.dark button.bg-green-600:hover {
+  background-color: #059669;
+}
